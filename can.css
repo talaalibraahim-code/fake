@@ -1,0 +1,145 @@
+:root {
+    --primary-green: #7fad39;
+    --text-dark: #1c1c1c;
+    --text-gray: #6f6f6f;
+    --bg-light: #f5f5f5;
+    --bg-hero: #f7f6f2;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: var(--text-dark);
+
+}
+
+/* Header & Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10%;
+    font-size: 13px;
+    border-bottom: 1px solid #ededed;
+    color: var(--text-gray);
+}
+
+.socials i { margin-left: 15px; cursor: pointer; }
+.lang { margin-left: 20px; border-left: 1px solid #ccc; padding-left: 15px; }
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+}
+
+.logo { font-size: 28px; font-weight: bold; }
+.logo span { color: var(--primary-green); }
+
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-right: 30px; }
+.nav-links a { text-decoration: none; color: var(--text-dark); font-weight: 700; font-size: 14px; }
+.nav-links a.active { color: var(--primary-green); }
+
+/* Hero Section */
+.hero {
+    display: flex;
+    padding: 0 10%;
+    gap: 30px;
+}
+
+.sidebar-menu { width: 25%; }
+.dept-btn {
+    width: 100%;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.search-bar {
+    display: flex;
+    margin-top: 20px;
+    border: 1px solid #ebebeb;
+}
+.search-bar input { border: none; padding: 10px; width: 70%; outline: none; }
+.search-btn { background: var(--primary-green); color: white; border: none; padding: 10px 15px; cursor: pointer; }
+
+.hero-content {
+    flex: 1;
+    background: var(--bg-hero);
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-text .subtitle { color: var(--primary-green); font-weight: bold; text-transform: uppercase; letter-spacing: 2px; }
+.hero-text h1 { font-size: 45px; margin: 10px 0; }
+.hero-text .price-tag { color: var(--primary-green); font-size: 20px; font-weight: bold; }
+.shop-btn { background: var(--primary-green); color: white; border: none; padding: 12px 30px; font-weight: bold; margin-top: 20px; cursor: pointer; }
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Features */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    text-align: center;
+}
+.feature-item { display: flex; align-items: center; gap: 15px; }
+.feature-item i { font-size: 30px; color: var(--primary-green); }
+.feature-item h4 { margin: 0; font-size: 14px; }
+.feature-item p { margin: 0; font-size: 12px; color: var(--text-gray); }
+
+/* Categories */
+.categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 10%;
+}
+.cat-card {
+    background: #fcfcfc;
+    border: 1px solid #f2f2f2;
+    text-align: center;
+    padding: 20px;
+}
+.cat-card img { width: 100px; height: 100px; object-fit: cover; margin-bottom: 10px; }
+
+/* Products Grid */
+.featured-products { text-align: center; padding: 50px 10%; }
+.featured-products h2 { font-size: 30px; margin-bottom: 30px; position: relative; }
+.featured-products h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-green);
+    margin: 10px auto;
+}
+
+.filter-tabs { margin-bottom: 40px; }
+.filter-tabs span { margin: 0 15px; color: var(--text-gray); cursor: pointer; font-weight: 500; }
+.filter-tabs span.active { color: var(--text-dark); border-bottom: 2px solid var(--primary-green); }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.product-item { text-align: center; transition: 0.3s; }
+.product-item img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+.cat-label { font-size: 12px; color: #b2b2b2; margin-bottom: 5px; }
+.product-item h4 { margin: 5px 0; font-size: 16px; }
+.price { font-weight: bold; font-size: 18px; }
+.old { text-decoration: line-through; color: #b2b2b2; font-size: 14px; margin-left: 10px; }
